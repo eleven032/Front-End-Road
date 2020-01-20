@@ -4,9 +4,9 @@ Description: Study summary list
 
 #### Topics:
 
-- [JS-Foundation](assets/JS-Foundations.md)
+- [JS-type](assets/JS-type.md)
 - [严格模式vs非严格模式](assets/USE_STRICK.md)
-
+- [== VS ===](assets/==VS===.MD)
 
 
 
