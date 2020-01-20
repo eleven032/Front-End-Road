@@ -4,8 +4,7 @@ Description: Study summary list
 
 #### Topics:
 
-- [JS-Foundation](assets/JS-Foundation.md)
-
+- [JS-Foundation](assets/JS-Foundations.md)
 
 
 
