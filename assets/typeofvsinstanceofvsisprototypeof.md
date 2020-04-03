@@ -44,5 +44,11 @@ Description: How them works, what is the result
 ```JavaScript
   obj.hasOwnProperty("属性名");//实例obj是否包含有圆括号中的属性,是则返回true,否则是false
 ```
->只针对自身属性，所有继承而来的属性都会返回false
 
+> 只针对自身属性，所有继承而来的属性都会返回 false
+
+```JavaScript
+  o.isPrototypeOf(p1);//o 是不是 p1的原型
+```
+
+>就如同code所示，用来检查是否存在于原型链上
