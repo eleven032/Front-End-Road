@@ -22,17 +22,17 @@ hello.apply(this,["tsrot",24]);
 ```JavaScript
 var obj = {
     x: 81,
-    };
+};
 var foo = {
     getX: function() {
         return this.x;
     }
-    }
+}
 console.log(foo.getX.bind(obj)());
 console.log(foo.getX.call(obj));
 console.log(foo.getX.apply(obj));
 ```
 
->一个一个传入参数
+> 一个一个传入参数
 
->需要进行调用才能执行
+> 需要进行调用才能执行
