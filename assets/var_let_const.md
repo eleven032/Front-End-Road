@@ -142,7 +142,7 @@ console.log(a); //ReferenceError: a is not defined
 
 > setTimeout 里的 fun 引用了外部 i 变量，形成一个闭包，每个 i 都被保存了下来，而没有被销毁。
 
-## let
+## const
 
 ### Features
 
