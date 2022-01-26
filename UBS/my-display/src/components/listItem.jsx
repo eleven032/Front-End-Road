@@ -39,24 +39,23 @@ const TextContainer = styled.div`
 
 function ListItem(item) {
   const [clicked, setClick] = useState(false);
-  const { innerItem } = item;
   return (
     <Container onClick={() => setClick(!clicked)}>
-      <TitleContainer>{innerItem.API}</TitleContainer>
+      <TitleContainer>{item.item.API}</TitleContainer>
       {clicked
         ? (
           <>
             <SubContainer>
               <TextContainer>Category:</TextContainer>
-              <TextContainer>{innerItem.Category}</TextContainer>
+              <TextContainer>{item.item.Category}</TextContainer>
             </SubContainer>
             <SubContainer>
               <TextContainer>Description:</TextContainer>
-              <TextContainer>{innerItem.Description}</TextContainer>
+              <TextContainer>{item.item.Description}</TextContainer>
             </SubContainer>
             <SubContainer>
               <TextContainer>Link:</TextContainer>
-              <TextContainer>{innerItem.Link}</TextContainer>
+              <TextContainer>{item.item.Link}</TextContainer>
             </SubContainer>
           </>
         )
