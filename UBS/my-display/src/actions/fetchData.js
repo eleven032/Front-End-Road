@@ -1,18 +1,17 @@
-import axios from "axios";
-import { fetchDataRequest, fetchDataSuccess, fetchDataError } from "./action";
+import axios from 'axios';
+import { fetchDataRequest, fetchDataSuccess, fetchDataError } from './action';
 
 export function fetchData() {
-    return dispatch => {
+    return (dispatch) => {
         dispatch(fetchDataRequest());
         axios
             .get(
-                "https://api.publicapis.org/entries"
+                'https://api.publicapis.org/entries',
             )
-            .then(response => {
+            .then((response) => {
                 dispatch(fetchDataSuccess(response.data));
             })
-            .catch(error => {
-                console.log('hererererere')
+            .catch((error) => {
                 dispatch(fetchDataError(error));
             });
     };
