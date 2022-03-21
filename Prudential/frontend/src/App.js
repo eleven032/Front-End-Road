@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from "react";
+import {
+  BrowserRouter as Router,
+  Navigate,
+  Route,
+  Routes,
+} from "react-router-dom";
+import { ErrorBoundary } from "./components/ErrorBoundary";
+import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <ErrorBoundary>
+        <Routes>
+          {/* Home page */}
+          <Route path="/" exact element={<Home />} />
+          {/* <Route path="/testing" element={<Testing />} /> */}
+
+          {/*404 page*/}
+          <Route path="/404" element={<NotFound />} />
+          <Route path="*" element={<Navigate to="/404" />} />
+        </Routes>
+      </ErrorBoundary>
+    </Router>
   );
 }
 
